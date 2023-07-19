@@ -1,11 +1,12 @@
+
 #include<stdio.h>
 void main()
 {
     char customer_name[10], product_name[10];
 	int price, quantity, discount, total_amount;
-	printf("Enter customer_name \n ");
+	printf("Enter customer_name ");
 	scanf("%s",&customer_name);
-	printf("Enter product_name\n  ");
+	printf("Enter product_name ");
 	scanf("%s",&product_name);
 	printf("Enter price = ");
 	scanf("%d",&price);
