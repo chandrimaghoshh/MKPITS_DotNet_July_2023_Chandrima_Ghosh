@@ -17,5 +17,7 @@ void main()
 //ALGORITHM
 //1. start
 //2. declare counter = 20
-//3. if counter is less than equal to 30 then
-//    3.1) if 
+//3. check counter is less than equal to 30 then, go to step 4
+//4. if counter is divided by 2 or equal to 0 then,
+//5. print "counter"
+//6.stop

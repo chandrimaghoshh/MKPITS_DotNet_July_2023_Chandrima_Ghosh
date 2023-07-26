@@ -12,9 +12,8 @@ void main()
 
 //ALGORITHM
 //1. start
-//2. declare counter=10, sum=0
+//2. declare counter=10
 //3. check counter is greater than or equal to zero then,
-// 		4.1) sum = sum+counter
-//      4.2) counter = counter+1
-//5. print "sum"
+//      4.1) counter = counter-1
+//5. print "counter"
 //6. stop
