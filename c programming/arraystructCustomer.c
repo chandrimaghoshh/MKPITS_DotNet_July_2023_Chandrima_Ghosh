@@ -5,6 +5,18 @@ struct  balance
 	char name[20];
 	int acc_no,balance;
 };
+void print(struct balance bal[3])
+{
+	int counter;
+	printf("Account with balance less than 100 rs : ");
+	for(counter=0;counter<3;counter++)
+	{
+		if(bal[counter].balance<100)
+		{
+		printf("\nName = %s\tAccount no.= %d\t",bal[counter].name,bal[counter].acc_no);
+		}
+	}
+}
 void main()
 {
 	struct balance bal[3];
@@ -14,15 +26,7 @@ void main()
 		printf("Enter Name, Acc.No, Balance : ");
 		scanf("%s%d%d",&bal[counter].name,&bal[counter].acc_no,&bal[counter].balance);
 	}
-	
-	printf("Account with balance less than 100 rs : ");
-	for(counter=0;counter<3;counter++)
-	{
-		if(bal[counter].balance<100)
-		{
-		printf("Name = %s\tAccount no.= %d\t",bal[counter].name,bal[counter].acc_no);
-		}
-	}
+	print(bal);
 }
 //ALGORITHM
 //1.start

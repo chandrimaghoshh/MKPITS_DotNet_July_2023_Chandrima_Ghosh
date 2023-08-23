@@ -14,9 +14,9 @@ struct student
 };
 void main()
 {
-	struct student stud[5];
+	struct student stud[2];
 	int counter,result;
-	for(counter=0;counter<5;counter++)
+	for(counter=0;counter<2;counter++)
 	{
 		printf("Enter Rollno., Name : ");
 		scanf("%d%s",&stud[counter].rollno,&stud[counter].name);
@@ -25,7 +25,7 @@ void main()
 		printf("Addmission Date : ");
 		scanf("%d-%d-%d",&stud[counter].addate.date,&stud[counter].addate.month,&stud[counter].addate.year);
 	}
-	for(counter=0;counter<5;counter++)
+	for(counter=0;counter<2;counter++)
 	{
 		result=stud[counter].addate.year - stud[counter].birthdate.year;
 		printf("\nAge of student at the time of addmission : ");
