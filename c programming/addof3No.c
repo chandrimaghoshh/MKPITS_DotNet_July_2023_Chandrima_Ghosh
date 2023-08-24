@@ -9,5 +9,5 @@ void main()
 	printf("Enter num3 ");
 	scanf("%d",&num3);
 	add = num1 + num2 + num3;
-	printf("addition = %d", add);
+	printf("addtion = %d", add);
 }
