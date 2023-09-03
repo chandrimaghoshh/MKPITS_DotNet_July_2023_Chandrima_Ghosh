@@ -10,6 +10,7 @@ class Vehical
 		virtual void stop()
 		{
 			cout<<"Stop engine : "<<endl;
+			cout<<"------------------------------"<<endl;
 		}
 };
 class Car : public Vehical
@@ -22,6 +23,7 @@ class Car : public Vehical
 		void stop()
 		{
 			cout<<"Car is stop"<<endl;
+			cout<<"------------------------------"<<endl;
 		}
 };
 class Motorcycle : public Vehical
@@ -34,6 +36,7 @@ class Motorcycle : public Vehical
 		void stop()
 		{
 			cout<<"Motocycle is stop"<<endl;
+			cout<<"------------------------------"<<endl;
 		}
 };
 class Truck : public Vehical
@@ -51,23 +54,23 @@ class Truck : public Vehical
 int main()
 {
 	Vehical *V;
-	Vehical v;
-	Car c;
-	Motorcycle m;
-	Truck t;
 	
+	Vehical v;
 	V = &v;
 	V->start();
 	V->stop();
 	
+	Car c;
 	V = &c;
 	V->start();
 	V->stop();
 	
+	Motorcycle m;
 	V = &m;
 	V->start();
 	V->stop();
 	
+	Truck t;
 	V = &t;
 	V->start();
 	V->stop();

@@ -5,7 +5,8 @@ class Animals
 	public:
 		virtual void sound()
 		{
-			cout<<"Sounds of animals"<<endl;
+			cout<<"Sounds of Animals"<<endl;
+			cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 		}
 };
 class Dog : public Animals
@@ -35,20 +36,20 @@ class Cow : public Animals
 int main()
 {
 	Animals *A;
-	Animals a;
-	Dog d;
-	Cat c;
-	Cow co;
 	
+	Animals a;
 	A = &a;
 	A->sound();
 	
+	Dog d;
 	A = &d;
 	A->sound();
 	
+	Cat c;
 	A = &c;
 	A->sound();
 	
+	Cow co;
 	A = &co;
 	A->sound();
 	return 0;
