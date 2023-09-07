@@ -1,0 +1,25 @@
+<html>
+<style>
+
+.container{position:relative}
+
+.box1{position:absolute;width:50%;height:120px;top:20px;left:30px;padding:10px;background-color:lightpink;border:2px solid red}
+.box2{position:absolute;width:30%;height:100px;top:40px;left:40px;padding:10px;background-color:lightgrey;border:2px solid red}
+.box3{position:absolute;width:20%;height:100px;top:50px;left:50px;padding:10px;background-color:lightgreen;border:2px solid red}
+
+</style>
+<body>
+
+<h2>Overlapping Elements</h2>
+
+<p>If two positioned elements overlap each other without a z-index specified,
+the element defined last in the HTML code will be shown on top:</p>
+
+<div class="container">
+<div class="box1">Box1</div>
+<div class="box1">Box2</div>
+<div class="box1">Box3</div>
+</div>
+
+</body>
+</html>
