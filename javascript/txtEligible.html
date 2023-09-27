@@ -1,0 +1,28 @@
+<!--wap to accept age from the user and display whether he is eligable to vote or not.-->
+
+<html>
+    <script langauge="javascript">
+
+        function check()
+        {
+            var age=document.getElementById("t1").value;
+
+            if(age>=18)
+            {
+                document.getElementById("res").innerHTML="Eligable for vote ";
+            }
+            else if(age<=18)
+            {
+                document.getElementById("res").innerHTML="Not eligable for vote ";
+            }
+        }
+    </script>
+        <form name="f1">
+            Enter Age : <input type=text id="t1"/><br><br>
+            
+            <input type="button" value="ok" onclick="check();"/>
+            <br><br>
+
+            <span id="res">Result :</span>
+        </form>
+</html>
