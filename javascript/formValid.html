@@ -1,0 +1,50 @@
+<!--create a login form and write code for validation-->
+
+<html>
+    <form name="f1">
+        <h3 style="text-align: center;">Enter Login Details :</h3> <br>
+        <p style=text-align:center>username : <input type=text id="t1" /> <span id="u1" style="color:red;">*</span></p>
+        <br><br>
+        <p style=text-align:center>password : <input type=password id="t2" /> <span id="u2" style="color:red;">*</span></p>
+         <br><br>
+        <button type=button onclick="check()";> Submit </button><br>
+        <div id="res" >--</div>
+        
+        </form>
+        <script language="javascript">
+        function check()
+        {
+         var u=document.getElementById("t1").value;
+         var p=document.getElementById("t2").value;
+         if(u=="" && p=="")
+         {
+         document.getElementById("u1").innerHTML="please enter username";
+         document.getElementById("u2").innerHTML="please enter password";
+         }
+         else if(u=="")
+         {
+         document.getElementById("u1").innerHTML="please enter username";
+         document.getElementById("u2").innerHTML="";
+         }
+         else if(p=="")
+         {
+         document.getElementById("u2").innerHTML="please enter password";
+         document.getElementById("u1").innerHTML="";
+         }
+         else
+        { 
+        document.getElementById("u1").innerHTML="";
+        document.getElementById("u2").innerHTML="";
+        
+         if(u=="admin" && p=="admin")
+         {
+         document.getElementById("res").innerHTML="login successfull";
+         }
+         else
+         {
+         document.getElementById("res").innerHTML="invalid credentials ! ";
+         }
+        }
+        }
+        </script>
+</html>
