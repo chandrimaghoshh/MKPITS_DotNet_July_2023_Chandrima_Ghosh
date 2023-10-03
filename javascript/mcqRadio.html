@@ -11,31 +11,44 @@
 </head>
 <div class="container">
     <div class="jumbotron text-center">
-        <h1>Operators</h1>
+        <h1>Score</h1>
     </div>
     <form name="f1">
-        <div class="form-group">
-            Quetion 1 : Capital of India<br> <input type="radio" class="form-control" name="t1" />Delhi<br>
-            Quetion 2 : Capital of Maharashtra <br><input type="text" class="form-control" name="t2" /><br>
-            Quetion 3 : Capital of Madhaya Pradesh<br><input type="text" class="form-control" name="t3" /><br>
-        </div>
         <div class="form-check">
+            Quetion 1: Capital of India <br>
             <div class="row">
                 <div class="col">
-                    <label for="add">Add</label>
-                    <input type="checkbox" name="a1" id="a1" onclick="add();">
+                    
+                    <label for="d1">Delhi</label>
+                    <input type="radio" class="form-check-label" name="d1" id="d1" onclick=";">
                 </div>
                 <div class="col">
-                    <label for="sub">Sub</label>
-                    <input type="checkbox" name="a1" id="s1" onclick="sub();">
+                    <label for="w1">Bhopal</label>
+                    <input type="radio" class="form-check-label" name="d1" id="w1" onclick=";">
+                </div>
+            </div><br>
+            Quetion 2: Capital of Maharashtra <br>
+            <div class="row">
+                <div class="col">
+                    
+                    <label for="d1">Nagpur</label>
+                    <input type="radio" class="form-check-label" name="d1" id="d1" onclick=";">
                 </div>
                 <div class="col">
-                    <label for="add">Mul</label>
-                    <input type="checkbox" name="a1" id="m1" onclick="mul();">
+                    <label for="w1">Mumbai</label>
+                    <input type="radio" class="form-check-label" name="d1" id="w1" onclick=";">
+                </div>
+            </div><br>
+            Quetion 3: Capital of Madhya pradesh <br>
+            <div class="row">
+                <div class="col">
+                    
+                    <label for="d1">Bhopal</label>
+                    <input type="radio" class="form-check-label" name="d1" id="d1" onclick=";">
                 </div>
                 <div class="col">
-                    <label for="add">Div</label>
-                    <input type="checkbox" name="a1" id="d1" onclick="div();">
+                    <label for="w1">Nagpur</label>
+                    <input type="radio" class="form-check-label" name="d1" id="w1" onclick=";">
                 </div>
             </div><br><br>
             <div class="form-group">
@@ -55,34 +68,11 @@
 </div>
 
 <script langauge="javascript">
-    function add()
+    function submit()
     {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1+num2;
-        document.getElementById("ad").innerHTML=(""+result);
+        var select=document.getElementById
     }
-    function sub()
-    {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1-num2;
-        document.getElementById("sb").innerHTML=(""+result);
-    }
-    function mul()
-    {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1*num2;
-        document.getElementById("mp").innerHTML=(""+result);
-    }
-    function div()
-    {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1/num2;
-        document.getElementById("di").innerHTML=(""+result);
-    }
+
     function display()
     {
 

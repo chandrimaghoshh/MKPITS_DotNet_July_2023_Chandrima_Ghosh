@@ -15,31 +15,31 @@
     </div>
     <form name="f1">
         <div class="form-group">
-            Enter num1 : <input type="text" class="form-control" name="t1" /><br>
-            Enter num2 : <input type="text" class="form-control" name="t2" /><br>
+            Enter num1 : <input type="text" class="form-control" name="t1" id="t1" /><br>
+            Enter num2 : <input type="text" class="form-control" name="t2" id="t2" /><br>
         </div>
         <div class="form-check">
             <div class="row">
                 <div class="col">
                     <label for="add">Add</label>
-                    <input type="checkbox" name="a1" id="a1" onclick="add();">
+                    <input type="checkbox" name="add" id="add">
                 </div>
                 <div class="col">
                     <label for="sub">Sub</label>
-                    <input type="checkbox" name="a1" id="s1" onclick="sub();">
+                    <input type="checkbox" name="sub" id="sub">
                 </div>
                 <div class="col">
                     <label for="add">Mul</label>
-                    <input type="checkbox" name="a1" id="m1" onclick="mul();">
+                    <input type="checkbox" name="mul" id="mul">
                 </div>
                 <div class="col">
                     <label for="add">Div</label>
-                    <input type="checkbox" name="a1" id="d1" onclick="div();">
+                    <input type="checkbox" name="a1" id="div">
                 </div>
             </div><br><br>
             <div class="form-group">
                 <button class="btn btn-primary" type=button onclick="display();"> submit </button>
-                </div><br><br>
+            </div><br><br>
 
     </form>
 </div>
@@ -48,58 +48,54 @@
     <h2>Display</h2>
     <div class="row">
         <div class="col">
-            Addition-- : <span id="ad"></span>
+            Addition-- : <span id="add"></span>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            Substraction-- : <span id="sb"></span>
+            Substraction-- : <span id="sub"></span>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            Multiplication-- : <span id="mp"></span>
+            Multiplication-- : <span id="mul"></span>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            Division-- : <span id="di"></span>
+            Division-- : <span id="div"></span>
         </div>
     </div>
 </div>
 
 <script langauge="javascript">
-    function add()
-    {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1+num2;
-        document.getElementById("ad").innerHTML=(""+result);
-    }
-    function sub()
-    {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1-num2;
-        document.getElementById("sb").innerHTML=(""+result);
-    }
-    function mul()
-    {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1*num2;
-        document.getElementById("mp").innerHTML=(""+result);
-    }
-    function div()
-    {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t2.value);
-        var result=num1/num2;
-        document.getElementById("di").innerHTML=(""+result);
-    }
-    function display()
-    {
+    function display() {
+        var num1 = parseInt(document.getElementById("t1")).value;
+        var num2 = parseInt(document.getElementById("t2")).value;
 
+        var res1 = ""
+        var result = 0
+        var res = document.getElementById("add").checked;
+        if (add == true) 
+        {
+            res1="add";
+            res1 = "num1+num2 ";
+            alert(res1);
+        }
+        var sub = document.getElementById("sub").checked;
+
+        if (sub == true) {
+            ans += " num1-num2";
+        }
+        if (mul == true) {
+            ans += " num1*num2";
+        }
+        if (div == true) {
+            ans += " num1/num2";
+        }
+
+        document.getElementById("cou").innerHTML = co;
     }
 </script>
+
 </html>
