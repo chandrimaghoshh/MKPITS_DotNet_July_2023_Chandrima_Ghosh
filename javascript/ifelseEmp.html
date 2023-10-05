@@ -26,46 +26,50 @@
     </div>
     <br>
     <div class="container">
-        <input type=button class="btn btn-success" onclick="check();" value="submit" />
+        <input type=button class="btn btn-success" onclick="employe();" value="submit" />
         <br><br>
-        Emp Name: <span id="name"></span><br>
-        Salary: <span id="sal"></span><br>
-        Designation: <span id="desig"></span><br>
-        Total Salary: <span id="total"></span>
-        <br>
-    </div>
-    </body>
+        Employe Name:-<div id="ename"></div>
+    Employe Salary:-<div id="esal"></div>
+    Employe Designation:-<div id="edes"></div>
+    Total salary:-<div id="tsal"></div>
+    
+    
+   
 
 
-    <script langauge="javascript">
-
-        function check() 
+</div>
+<script language="javascript">
+    function employe()
+    {
+        var total;
+        var name=document.getElementById("t1").value;
+        var salary=document.getElementById("t2").value;
+        var des=document.getElementById("t3").value;
+        if(des=="manager")
         {
-            var name=document.getElementById("t1").value;
-            var salary=parseFloat(document.getElementById("t2").value);
-            var designation=document.getElementById("t3").value;
-            var bonus=0;
-
-            document.getElementById("name").innerHTML=""+name;
-            document.getElementById("sal").innerHTML=""+salary;
-            document.getElementById("desig").innerHTML=""+designation;
-            
-            if (designation == "manager") 
-            {
-                Bonus = "5000"
-            }
-            else if (designation == "clerk") 
-            {
-                Bonus = "2000"
-            }
-            else(designation == "peon") 
-            {
-                Bonus = "1000"
-            }
-            var total=salary+bonus
-		   document.getElementById("total").innerHTML=" " +total;
+            bonus=5000
+        }
+        else if(des=="clerk")
+        {
+            bonus=2000
+        }
+        else if(des=="peon")
+        {
+            bonus=1000
+        }
+        else
+        {
+            document.getElementById("edes").innerHTML="Invalid";
         }
 
-    </script>
+       total=parseInt(salary)+parseInt(bonus);
+       document.getElementById("ename").innerHTML=name;
+       document.getElementById("esal").innerHTML=salary;
+       document.getElementById("edes").innerHTML=des;
+       document.getElementById("tsal").innerHTML=total;
 
+        
+    }
+
+</script>
 </html>

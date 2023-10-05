@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>grade</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h2>Grade</h2>
+    </div>
+    <div class="container">
+        <div form="form-control">
+            Enter Grade : <input type="text" class="form-control" id="t1" /><br>
+
+            <button type="button" class="form-control btn-primary" onclick="check();">Submit</button><br>
+
+            <span id="res" class="form-control"></span>
+        </div>
+    </div>
+</body>
+
+<script langauge="javascript">
+
+    function check() 
+    {
+        var grade = 'B';
+        var result="";
+
+        switch (grade) 
+        {
+            case 'A':
+                result += " A Grade";
+                
+            case 'B':
+                result += " B Grade";
+                
+            case 'C':
+                result += " C Grade";
+                
+            default:
+                result += " No Grade";
+                
+        }
+        document.getElementById("res").innerHTML="Grade :"+result;
+    }
+</script>
