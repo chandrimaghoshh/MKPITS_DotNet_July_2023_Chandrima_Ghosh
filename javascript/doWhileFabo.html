@@ -1,0 +1,25 @@
+<!-- wap to print a  fabonachii series from 1 to 100 using for loop
+1,2,3,5,8,13.........-->
+
+<title>fabbo</title>
+
+<script>
+
+    var num1=0;
+    var num2=1;
+    var result=0;
+    var cnt=1;
+    
+    do
+    {
+        if(result=num1+num2)
+        {
+            document.write(""+result+"<br>");
+            num1=num2;
+            num2=result;
+        }
+        cnt++
+
+    }
+    while(cnt<=100);
+</script>
