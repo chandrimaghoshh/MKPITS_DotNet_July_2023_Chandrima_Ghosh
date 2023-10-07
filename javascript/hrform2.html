@@ -1,0 +1,44 @@
+<html>
+
+<body>
+<h1 align=center >mkpits solution</h1>
+<hr>
+<center>
+<form name="f1" style="width:50%" >
+<fieldset>
+<legend>calculation </legend>
+enter number <input type=text name="n1" />
+<br><br>
+
+	<input type=button value="result" onclick="msg();" />
+	<br><br>
+	 <span id="r1" name="res" ></span>
+</fieldset>
+</form>
+</center>
+</body>
+
+<head>
+<script>
+function msg() {
+var r=document.getElementById("r1");
+var num;
+var result;
+
+num=parseInt(document.f1.n1.value);//parseInt function is used to convert string into integer
+var result=1;
+r.innerText="";
+for(i=1;i<=10;i++)
+{
+result = num * i ; // 5 *1= 5
+r.innerText += num + "*" + i + "= " + result ;
+r.innerHTML +="<br>";
+}
+
+
+}
+</script>
+</head>
+
+
+</html>

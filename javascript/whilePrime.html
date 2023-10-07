@@ -32,21 +32,24 @@
         var num=parseInt(document.getElementById("t1").value);
         var i;
         var cnt=0;
-        while(num % i == 0)
+        while(i<num)
         {
-        
+            if(num % i == 0)
+            {
+                cnt++;
+            }
+        }
+        i++;
         if(cnt==2)
         {
-            i<=num;
-            c++
+            
             document.getElementById("res").innerHTML="It is prime";
         }
         else
         {
             document.getElementById("res").innerHTML="It is not prime";
         }
-        i++
-        }
+        
     }
         
     
