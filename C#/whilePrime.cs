@@ -1,25 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace whilePrime
+namespace whilePrimeNo
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int counter=2, num, flag;
+            int num = 2;
+            int counter = 2;
+            int flag;
 
-            Console.WriteLine("Enter num : ");
-            num = Convert.ToInt32(Console.ReadLine());
-
-            while(counter < num)
+            while(counter <= 20)
             {
-                if(counter )
+                counter = 2;
+                flag = 0;
+               while(counter < num)
+                {
+                    if(num % counter == 0)
+                    {
+                        flag = 1;
+                        break;
+                    }
+                }
+               if(flag == 0)
+                {
+                    Console.WriteLine("Prime no {0} : ", num);
+                }
+                num++;
             }
-
+            Console.ReadKey();
         }
     }
 }
