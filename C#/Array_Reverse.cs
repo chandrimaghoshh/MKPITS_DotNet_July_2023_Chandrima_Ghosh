@@ -30,7 +30,7 @@ namespace Array_Reverse
             {
                 Console.Write("{0} ", num[cnt]);
             }
-            Console.ReadKey();
+            Console.ReadKey();0
         }
     }
 }
