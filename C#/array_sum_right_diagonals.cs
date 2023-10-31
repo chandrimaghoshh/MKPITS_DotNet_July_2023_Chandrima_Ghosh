@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace array_sum_left_diagonals
+namespace Array_sum_Right_Diagonals
 {
     internal class Program
     {
@@ -8,6 +12,7 @@ namespace array_sum_left_diagonals
         {
             int[,] arr1 = new int[2, 2];
             int[,] arr2 = new int[2, 2];
+            int[,] arr3 = new int[2, 2];
             int sum = 0;
 
             for (int row = 0; row < 2; row++)
@@ -22,25 +27,24 @@ namespace array_sum_left_diagonals
             {
                 for (int col = 0; col < 2; col++)
                 {
-                    if(row!=col)
+                    if (row==col)
                     {
                         sum = sum + arr1[row, col];
                     }
                 }
             }
-            Console.WriteLine("The matrix is : ");
+            Console.Write("The matrix is :\n");
             for (int row = 0; row < 2; row++)
             {
                 for (int col = 0; col < 2; col++)
                 {
                     Console.Write(arr1[row, col] + "\t");
-                    
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("Addition of the left Diagonal elements is : " + sum);
-            Console.ReadKey();
 
+            Console.Write("Addition of the right Diagonal elements is :{0}\n",sum);
+            Console.ReadKey();
         }
     }
 }
